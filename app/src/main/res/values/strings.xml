@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GoogleMapsDemo</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="map_normal">Normal</string>
+    <string name="map_hybrid">Hybrido</string>
+    <string name="map_satelital">Satelital</string>
+    <string name="map_terrain">Terrain</string>
+    <string name="map_black">Black</string>
+</resources>
