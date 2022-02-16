@@ -84,7 +84,7 @@ class MarkersMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.O
 
 
 
-        losAngelesMarker.tag = "Restaurant"
+        losAngelesMarker!!.tag = "Restaurant"
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(losAngeles, 10f)  )//animacion para mostrar el punto establecido
 
@@ -103,27 +103,25 @@ class MarkersMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.O
     }
 
     //funcion para determinar la accion al precionar el marcador
-    override fun onMarkerClick(marker: Marker?): Boolean {
-        if(marker != null)
-            Log.d("Marker", marker.tag as String)
+    override fun onMarkerClick(p0: Marker): Boolean {
+        if(p0 != null)
+            Log.d("Marker", p0.tag as String)
         else
             Log.d("Marker", "empty")
         map.animateCamera(CameraUpdateFactory.zoomTo(17f), 2000, null)
-        marker?.showInfoWindow()
+        p0?.showInfoWindow()
         return true
     }
 
-    override fun onMarkerDragStart(marker: Marker?) {
-        Log.d("drag", "start $marker")
+    override fun onMarkerDrag(p0: Marker) {
+        Log.d("drag", "drag $p0")
     }
 
-    override fun onMarkerDrag(marker: Marker?) {
-        Log.d("drag", "drag $marker")
-
+    override fun onMarkerDragEnd(p0: Marker) {
+        Log.d("drag", "end $p0")
     }
 
-    override fun onMarkerDragEnd(marker: Marker?) {
-        Log.d("drag", "end $marker")
-
+    override fun onMarkerDragStart(p0: Marker) {
+        Log.d("drag", "start $p0")
     }
 }

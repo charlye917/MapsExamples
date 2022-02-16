@@ -81,7 +81,8 @@ class ShapesMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
 
     }
 
-    override fun onPolylineClick(p0: Polyline?) {
+    override fun onPolylineClick(p0: Polyline) {
         Toast.makeText(applicationContext, "click",Toast.LENGTH_SHORT).show()
+
     }
 }

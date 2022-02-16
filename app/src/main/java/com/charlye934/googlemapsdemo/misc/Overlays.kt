@@ -14,7 +14,7 @@ class Overlays {
         LatLng(33.923355832075785, -118.25933321818009)
     )
 
-    fun adGroundOverlay(map: GoogleMap): GroundOverlay {
+    fun adGroundOverlay(map: GoogleMap): GroundOverlay? {
 
         return map.addGroundOverlay(
             GroundOverlayOptions().apply {
@@ -35,7 +35,7 @@ class Overlays {
             }
         )
 
-        groundOverlay.tag = "my tag"
+        groundOverlay!!.tag = "my tag"
         return groundOverlay
     }
 }

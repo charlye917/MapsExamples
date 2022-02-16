@@ -67,7 +67,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
                     .snippet("Some random text")
                     .flat(true)// para rotar el icono con la pantalla
                 )
-        sixFlagsMarket.tag = "Six Flags"
+        sixFlagsMarket!!.tag = "Six Flags"
 
         val cuEstadioMarker =
             map.addMarker(
@@ -179,9 +179,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolyli
         return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
-    override fun onPolylineClick(p0: Polyline?) {
+    override fun onPolylineClick(p0: Polyline) {
         Toast.makeText(this, "click polygon",Toast.LENGTH_SHORT).show()
     }
+
 
     /*
     override fun onMarkerClick(marker: Marker): Boolean {

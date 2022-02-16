@@ -48,4 +48,9 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$livedata_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version"
+    // KTX for the Maps SDK for Android library
+    implementation 'com.google.maps.android:maps-ktx:3.3.0'
+
+    // KTX for the Maps SDK for Android Utility Library
+    implementation 'com.google.maps.android:maps-utils-ktx:3.3.0'
 }

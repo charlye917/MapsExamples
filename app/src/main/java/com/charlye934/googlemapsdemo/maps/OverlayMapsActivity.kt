@@ -74,12 +74,13 @@ class OverlayMapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.O
             delay(4000L)
             //groundOverlay.remove()
             //groundOverlay.transparency = 0.5f
-            Log.d("__tag",groundOverlay.tag.toString())
+            Log.d("__tag",groundOverlay!!.tag.toString())
         }
 
     }
 
-    override fun onPolylineClick(p0: Polyline?) {
+    override fun onPolylineClick(p0: Polyline) {
         Toast.makeText(applicationContext, "click",Toast.LENGTH_SHORT).show()
+
     }
 }
